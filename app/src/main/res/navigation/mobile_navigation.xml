@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_Messages">
+
+    <fragment
+        android:id="@+id/navigation_Messages"
+        android:name="com.example.mccchatapp.ui.messages.MessagesFragment"
+        tools:layout="@layout/fragment_messages" />
+
+    <fragment
+        android:id="@+id/navigation_UserList"
+        android:name="com.example.mccchatapp.ui.userlist.UserListFragment"
+        tools:layout="@layout/fragment_user_list" />
+
+    <fragment
+        android:id="@+id/navigation_GroupList"
+        android:name="com.example.mccchatapp.ui.grouplist.GroupListFragment"
+        tools:layout="@layout/fragment_group_list" />
+</navigation>

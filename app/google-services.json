@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "518907605241",
+    "project_id": "mcc-chat-app-244ac",
+    "storage_bucket": "mcc-chat-app-244ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518907605241:android:8f713d850dee830bc37228",
+        "android_client_info": {
+          "package_name": "com.example.mccchatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518907605241-a2qo5a1blftk3j9dbdvkb52tg0b398if.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgmJwsxS1U5t6VsbU77SGYuhuK9bTKook"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518907605241-a2qo5a1blftk3j9dbdvkb52tg0b398if.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

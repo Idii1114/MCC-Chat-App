@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#00B9E5</color>
+    <color name="primary_dark">#00627A</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dialog_background">#F6F6F6</color>
+    <color name="button">#000000</color>
+    <color name="input_background">#ECECEC</color>
+    <color name="received_message_background">#C1C1C1</color>
+    <color name="icon_background">#858585</color>
+    <color name="active">#00FF0A</color>
+    <color name="busy">#FF002E</color>
+    <color name="away">#FF9800</color>
+</resources>

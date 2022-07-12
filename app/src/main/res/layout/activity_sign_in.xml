@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/agheswh"
+    android:clipToPadding="false"
+    android:overScrollMode="ifContentScrolls"
+    android:padding="24dp"
+    android:scrollbars="none"
+    tools:context=".activities.SignInActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:background="#88FFFFFF">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/mehlam_home_logo"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Melham Construction Corporation"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text" />
+
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="315dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/background_search"
+            android:ems="10"
+            android:hint="Email"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_16ssp"
+            android:paddingEnd="@dimen/_16ssp"
+            android:textColor="@color/primary_text"
+            android:textColorHint="#546E7A"
+            android:textSize="@dimen/_13ssp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            app:passwordToggleEnabled="true">
+
+
+            <EditText
+                android:id="@+id/inputPassword"
+                android:layout_width="318dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/background_search"
+                android:ems="10"
+                android:hint="Password"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/_16ssp"
+                android:paddingEnd="@dimen/_16ssp"
+                android:textColor="@color/primary_text"
+                android:textColorHint="#546E7A"
+                android:textSize="@dimen/_12ssp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_search"
+            android:text="Sign in"
+            android:textColor="#4E342E"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/textForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Forgot Password"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text" />
+
+        <TextView
+            android:id="@+id/textCreateNewAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Don't have an account? Sign up here"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text" />
+
+    </LinearLayout>
+</ScrollView>

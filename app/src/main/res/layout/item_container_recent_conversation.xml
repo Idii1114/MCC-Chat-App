@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_8sdp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/profileImage"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/background_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/availabilityStatus"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/background_image"
+        android:scaleType="centerCrop"
+        android:backgroundTint="@color/active"
+        app:layout_constraintEnd_toEndOf="@id/profileImage"
+        app:layout_constraintBottom_toBottomOf="@id/profileImage"
+        android:visibility="gone"
+        app:riv_oval="true"/>
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintTop_toTopOf="@id/profileImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profileImage"/>
+
+    <TextView
+        android:id="@+id/textRecentMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="70dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintTop_toBottomOf="@id/textName"
+        app:layout_constraintEnd_toEndOf="@id/textDateTime"
+        app:layout_constraintStart_toEndOf="@id/profileImage"
+        app:layout_constraintBottom_toBottomOf="@id/profileImage" />
+
+    <TextView
+        android:id="@+id/textDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondary_text"
+        android:layout_marginEnd="10dp"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textName"
+        app:layout_constraintStart_toEndOf="@id/textRecentMessage"
+        app:layout_constraintBottom_toBottomOf="@id/profileImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

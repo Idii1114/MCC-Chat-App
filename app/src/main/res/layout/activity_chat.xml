@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary"
+    tools:context=".activities.ChatActivity">
+
+  <LinearLayout
+      android:id="@+id/linearLayoutTop"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:src="@drawable/back"
+        app:tint="@color/white"/>
+
+    <FrameLayout
+        android:id="@+id/layoutImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+      <com.makeramen.roundedimageview.RoundedImageView
+          android:id="@+id/profileImage"
+          android:layout_width="@dimen/_35sdp"
+          android:layout_height="@dimen/_35sdp"
+          android:background="@drawable/background_image"
+          android:scaleType="centerCrop"
+          android:layout_gravity="center"
+          app:riv_oval="true"/>
+
+      <com.makeramen.roundedimageview.RoundedImageView
+          android:id="@+id/availabilityStatus"
+          android:layout_marginLeft="33dp"
+          android:layout_marginTop="33dp"
+          android:layout_width="12dp"
+          android:layout_height="12dp"
+          android:background="@drawable/background_image"
+          android:visibility="gone"
+          android:scaleType="centerCrop"
+          app:riv_oval="true" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/typingtatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="30dp"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+
+    <ImageView
+        android:id="@+id/button_info"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/info"
+        app:tint="@color/white"/>
+
+
+  </LinearLayout>
+
+  <View
+      android:id="@+id/viewBackground"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:background="@drawable/background_content_top"
+      android:focusableInTouchMode="true"
+      app:layout_constraintBottom_toTopOf="@+id/linearLayoutBottom"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop"
+      app:layout_constraintVertical_bias="0.0"
+      tools:layout_editor_absoluteX="0dp" />
+
+
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/chatRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:clipToPadding="false"
+      android:orientation="vertical"
+      android:overScrollMode="never"
+      app:stackFromEnd="true"
+      android:padding="@dimen/_5sdp"
+      android:visibility="gone"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      app:layout_constraintBottom_toBottomOf="@id/viewBackground"
+      app:layout_constraintTop_toBottomOf="@id/linearLayoutTop"/>
+
+  <LinearLayout
+      android:id="@+id/linearLayoutBottom"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_50sdp"
+      android:focusable="auto"
+      android:focusableInTouchMode="true"
+      app:layout_constraintBottom_toBottomOf="parent">
+
+
+    <EditText
+        android:id="@+id/inputMessage"
+        android:layout_width="30dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_search"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:hint="Type a message..."
+        android:inputType="text"
+        android:paddingStart="@dimen/_16ssp"
+        android:paddingEnd="@dimen/_16ssp"
+        android:selectAllOnFocus="false"
+        android:textColor="@color/primary_text"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/layoutSend"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:src="@drawable/send"
+        app:tint="@color/white" />
+
+
+  </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
