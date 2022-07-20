@@ -8,6 +8,8 @@
     <color name="black">#000000</color>
     <color name="dialog_background">#F6F6F6</color>
     <color name="button">#000000</color>
+    <color name="tint">#ADD0F0</color>
+    <color name="tint1">#6FA9DF</color>
     <color name="input_background">#ECECEC</color>
     <color name="received_message_background">#C1C1C1</color>
     <color name="icon_background">#858585</color>
