@@ -73,14 +73,14 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_32sdp"
+            android:background="@drawable/background_search"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
-            android:background="@drawable/background_search"
+            android:text="Change Name"
+            android:textAlignment="center"
             android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:textAlignment="center"
-            android:text="Change Name"
             tools:ignore="RtlCompat" />
 
         <androidx.appcompat.widget.AppCompatButton
