@@ -37,7 +37,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="15dp"
                 android:paddingStart="8dp"
-                android:text="Send Report"
+                android:text="@string/send_report"
                 android:textColor="@color/primary_text"
                 android:textSize="25dp"
                 android:textStyle="bold" />
@@ -64,14 +64,18 @@
             android:layout_height="436dp"
             android:layout_gravity="center"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:autofillHints=""
             android:background="@drawable/background_search"
+            android:backgroundTint="#142A69E3"
+            android:gravity="start"
             android:hint="Type something here..."
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:padding="@dimen/_16ssp"
-            android:gravity="start"
             android:textColor="@color/primary_text"
+            android:textColorHint="#0A0A0B"
             android:textSize="@dimen/_13ssp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -82,8 +86,8 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/background_search"
             android:backgroundTint="@color/primary"
-            android:textColor="@color/white"
-            android:text="Send" />
+            android:text="Send"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

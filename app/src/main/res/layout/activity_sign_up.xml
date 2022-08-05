@@ -14,8 +14,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#88FFFFFF">
+        android:background="#88FFFFFF"
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/back"
@@ -63,6 +63,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:background="@drawable/background_search"
+            android:backgroundTint="#6FA9DF"
             android:ems="10"
             android:hint="Name"
             android:imeOptions="actionNext"
@@ -70,7 +71,8 @@
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
-            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:textSize="@dimen/_13ssp" />
 
         <EditText
@@ -85,6 +87,8 @@
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
+            android:backgroundTint="#6FA9DF"
+            android:textStyle="bold"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
@@ -102,12 +106,12 @@
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
+            android:backgroundTint="#6FA9DF"
+            android:textStyle="bold"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp" />
-
-
 
 
         <EditText
@@ -123,11 +127,12 @@
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textPassword"
+            android:textStyle="bold"
+            android:backgroundTint="#6FA9DF"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp" />
-
 
 
         <EditText
@@ -137,6 +142,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/background_search"
+            android:backgroundTint="#6FA9DF"
             android:ems="10"
             android:hint="Confirm Password"
             android:imeOptions="actionNext"
@@ -144,8 +150,9 @@
             android:inputType="textPassword"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
-            android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/checkBox"
