@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,9 @@ import com.example.mccchatapp.activities.UsersActivity;
 import com.example.mccchatapp.databinding.FragmentGroupListBinding;
 
 public class GroupListFragment extends Fragment {
+
+    private View groupFragmentView;
+    private ListView list_view;
 
     private FragmentGroupListBinding binding;
 
