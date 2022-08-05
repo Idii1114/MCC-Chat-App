@@ -87,12 +87,12 @@
 
     <ImageView
         android:id="@+id/button_info"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_width="19dp"
+        android:layout_height="26dp"
         android:layout_gravity="center"
         android:layout_marginEnd="@dimen/_10sdp"
         android:src="@drawable/info"
-        app:tint="@color/white"/>
+        app:tint="@color/white" />
 
 
   </LinearLayout>

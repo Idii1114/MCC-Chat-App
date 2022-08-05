@@ -68,11 +68,11 @@
         <TextView
             android:id="@+id/text_email"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_height="23dp"
             android:layout_gravity="center"
-            android:textSize="20dp"
-            android:textColor="@color/primary_text"/>
+            android:layout_marginTop="5dp"
+            android:textColor="@color/primary_text"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/text_phone"
@@ -92,6 +92,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/background_search"
+            android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             android:text="Change Details"/>
@@ -104,6 +105,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/background_search"
+            android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             android:text="Account Status"/>
@@ -117,6 +119,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/background_search"
+            android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             android:text="Send Report"/>
@@ -130,6 +133,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/background_search"
+            android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             android:text="Sign Out"/>
