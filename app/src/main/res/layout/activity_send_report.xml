@@ -37,9 +37,9 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="15dp"
                 android:paddingStart="8dp"
-                android:text="Send Report"
+                android:text="@string/send_report"
                 android:textColor="@color/primary_text"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Space
@@ -53,9 +53,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:text="Feedback"
+            android:text="@string/feedback"
             android:textColor="@color/primary_text"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <EditText
@@ -67,7 +67,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/background_search"
-            android:hint="Type something here..."
+            android:hint="@string/type_something_here"
             android:inputType="textMultiLine"
             android:padding="@dimen/_16ssp"
             android:gravity="start"
@@ -83,7 +83,7 @@
             android:background="@drawable/background_search"
             android:backgroundTint="@color/primary"
             android:textColor="@color/white"
-            android:text="Send" />
+            android:text="@string/send" />
 
     </LinearLayout>
 

@@ -34,9 +34,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="15dp"
-                android:text="User Profile"
+                android:text="@string/user_profile"
                 android:textColor="@color/primary_text"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Space
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@color/primary_text"/>
 
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="@color/primary_text"/>
 
         <TextView
@@ -81,7 +81,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="30dp"
             android:layout_gravity="center"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="@color/primary_text"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -94,7 +94,7 @@
             android:background="@drawable/background_search"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:text="Change Details"/>
+            android:text="@string/change_details"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonAccountStatus"
@@ -106,7 +106,7 @@
             android:background="@drawable/background_search"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:text="Account Status"/>
+            android:text="@string/account_status"/>
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -119,7 +119,7 @@
             android:background="@drawable/background_search"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:text="Send Report"/>
+            android:text="@string/send_report"/>
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -132,7 +132,7 @@
             android:background="@drawable/background_search"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:text="Sign Out"/>
+            android:text="@string/sign_out"/>
 
 
     </LinearLayout>

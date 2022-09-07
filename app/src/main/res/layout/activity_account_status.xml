@@ -36,9 +36,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="15dp"
-                android:text="Active Status"
+                android:text="@string/active_status"
                 android:textColor="@color/primary_text"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Space
@@ -51,7 +51,7 @@
             android:id="@+id/switchActive"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Shows that you're Active"
+            android:text="@string/shows_that_you_re_active"
             android:layout_marginTop="@dimen/_30sdp"
             android:padding="@dimen/_20ssp"
             android:textAlignment="center"
@@ -62,7 +62,7 @@
             android:id="@+id/switchBusy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Shows that you're Busy"
+            android:text="@string/shows_that_you_re_busy"
             android:padding="@dimen/_20ssp"
             android:textAlignment="center"
             android:textStyle="bold"
@@ -72,7 +72,7 @@
             android:id="@+id/switchAway"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Shows that you're Away"
+            android:text="@string/shows_that_you_re_away"
             android:padding="@dimen/_20ssp"
             android:textAlignment="center"
             android:textStyle="bold"
