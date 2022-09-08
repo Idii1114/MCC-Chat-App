@@ -20,7 +20,7 @@
     <string name="profile">Profile</string>
     <string name="arrow">Arrow</string>
     <string name="info">Info</string>
-    <string name="type_a_message">Type a message...</string>
+    <string name="type_a_message">Type a message…</string>
     <string name="send_button">Send Button</string>
     <string name="send">Send</string>
     <string name="addfriend">AddFriend</string>
@@ -35,7 +35,7 @@
     <string name="send_report">Send Report</string>
     <string name="sign_out">Sign Out</string>
     <string name="feedback">Feedback</string>
-    <string name="type_something_here">Type something here...</string>
+    <string name="type_something_here">Type something here…</string>
     <string name="upload_image">upload_image</string>
     <string name="name">Name</string>
     <string name="phone_number">Phone Number</string>
