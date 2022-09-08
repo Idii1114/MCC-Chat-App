@@ -90,7 +90,8 @@
                 android:paddingEnd="@dimen/_16ssp"
                 android:textColor="@color/primary_text"
                 android:textColorHint="#546E7A"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

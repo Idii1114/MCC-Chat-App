@@ -48,4 +48,26 @@
     <string name="call">Call</string>
     <string name="sms_icon">SMS Icon</string>
     <string name="sms">SMS</string>
+    <string name="search">Search</string>
+    <string name="new_email">New Email</string>
+    <string name="email_change">Change Email?</string>
+    <string name="enter_your_updated_email">Enter your updated Email</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="close">Close</string>
+    <string name="update">Update</string>
+    <string name="name_change">Change Name?</string>
+    <string name="enter_your_updated_name">Enter your updated Name</string>
+    <string name="new_name">New name</string>
+    <string name="password_change">Change Password?</string>
+    <string name="enter_your_old_password">Enter your Old Password</string>
+    <string name="enter_your_new_password">Enter your New Password</string>
+    <string name="new_password">New Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="change_number">Change Phone Number?</string>
+    <string name="enter_your_updated_phone_number">Enter your updated Phone Number</string>
+    <string name="new_phone_number">New Phone Number</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="group_list">Group List</string>
+    <string name="messages">Messages</string>
+    <string name="user_list">User List</string>
 </resources>

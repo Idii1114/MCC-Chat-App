@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Change Email?"
+            android:text="@string/email_change"
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
 
@@ -27,8 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Enter your updated Email"
-            android:textSize="15dp" />
+            android:text="@string/enter_your_updated_email"
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/input_email"
@@ -37,7 +37,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="08dp"
             android:background="@drawable/background_search"
-            android:inputType="text"
+            android:hint="@string/new_email"
+            android:inputType="textEmailAddress"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
@@ -47,8 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Confirm your password"
-            android:textSize="15dp" />
+            android:text="@string/confirm_your_password"
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/input_password"
@@ -57,6 +58,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="08dp"
             android:background="@drawable/background_search"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
@@ -76,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/background_search"
-                android:text="Close" />
+                android:text="@string/close" />
 
             <Button
                 android:id="@+id/button_update"
@@ -84,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/background_search"
-                android:text="Update" />
+                android:text="@string/update" />
 
         </LinearLayout>
 

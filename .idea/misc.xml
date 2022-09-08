@@ -95,9 +95,22 @@
         <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/activity_profile.xml" value="0.22" />
         <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/activity_send_report.xml" value="0.18" />
-        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/activity_sign_in.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
         <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
         <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/activity_user_info.xml" value="0.25" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/activity_users.xml" value="0.22" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/dialog_change_email.xml" value="0.1" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/dialog_change_name.xml" value="0.22" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/dialog_change_password.xml" value="0.1" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/dialog_change_phone_number.xml" value="0.25" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/dialog_confirm_password.xml" value="0.1" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/fragment_group_list.xml" value="0.1" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/fragment_messages.xml" value="0.1" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/fragment_user_list.xml" value="0.1" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/item_container_recent_conversation.xml" value="0.1" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/item_container_user.xml" value="0.1" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/item_containter_received_message.xml" value="0.1" />
+        <entry key="..\:/Users/mtbue/AndroidStudioProjects/MCC-Chat-App/MCC-Chat-Appf/app/src/main/res/layout/item_containter_sent_message.xml" value="0.1" />
       </map>
     </option>
   </component>
