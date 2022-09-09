@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.MCCChatApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.MCCChatApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
-        <item name="android:statusBarColor" >@color/primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 </resources>

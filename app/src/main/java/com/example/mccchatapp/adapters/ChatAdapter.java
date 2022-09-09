@@ -67,6 +67,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else {
             ((ReceivedMessageViewHolder)holder).setData(chatMessages.get(position), receiverProfileImage);
         }
+
     }
 
     @Override
