@@ -1,5 +1,6 @@
 package com.example.mccchatapp.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,15 +14,11 @@ import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mccchatapp.databinding.ActivitySignUpBinding;
 import com.example.mccchatapp.utilities.Constants;
 import com.example.mccchatapp.utilities.PreferenceManager;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -29,19 +26,18 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 public class SignUpActivity extends AppCompatActivity {
 
     private ActivitySignUpBinding binding;
     private PreferenceManager preferenceManager;
-    private FirebaseAuth auth = FirebaseAuth.getInstance();
-    private FirebaseFirestore database = FirebaseFirestore.getInstance();
+    private final FirebaseAuth auth = FirebaseAuth.getInstance();
+    private final FirebaseFirestore database = FirebaseFirestore.getInstance();
 
     private String encodedImage;
     private String userId;
-
-    private Uri imageUri;
 
     private void showToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
@@ -104,6 +100,7 @@ public class SignUpActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("IntentReset")
     private void choosePicture() {
 
         binding.textUploadImage.setVisibility(View.INVISIBLE);
@@ -111,7 +108,7 @@ public class SignUpActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        imageUri = intent.getData();
+        Uri imageUri = intent.getData();
         binding.profileImage.setImageURI(imageUri);
         pickImage.launch(intent);
     }
@@ -121,39 +118,34 @@ public class SignUpActivity extends AppCompatActivity {
         HashMap<String, Object> user = new HashMap<>();
 
         auth.createUserWithEmailAndPassword(email,password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        user.put(Constants.KEY_NAME, name);
-                        user.put(Constants.KEY_PHONE_NUMBER, phone);
-                        user.put(Constants.KEY_EMAIL, email);
-                        user.put(Constants.KEY_IMAGE, encodedImage);
-                        if(task.isSuccessful()){
-                            showToast("Congratulations you are now registered!");
-                            userId = auth.getCurrentUser().getUid();
-                            database.collection(Constants.KEY_COLLECTION_USERS)
-                                    .document(userId)
-                                    .set(user)
-                                    .addOnSuccessListener(documentReference -> {
-                                        preferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
-                                        preferenceManager.putString(Constants.KEY_USER_ID, userId);
-                                        preferenceManager.putString(Constants.KEY_NAME, name);
-                                        preferenceManager.putString(Constants.KEY_EMAIL, email);
-                                        preferenceManager.putString(Constants.KEY_PHONE_NUMBER, phone);
-                                        preferenceManager.putString(Constants.KEY_PASSWORD, password);
-                                        preferenceManager.putString(Constants.KEY_IMAGE, encodedImage);
-                                        preferenceManager.putInteger(Constants.KEY_AVAILABILITY, 1);
-                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                                        startActivity(intent);
-                                        finish();
-                                    })
-                                    .addOnFailureListener(exception -> {
-                                        showToast("Unable to sign up!");
-                                    });
-                        } else {
-                            showToast("Email is already taken!");
-                        }
+                .addOnCompleteListener(task -> {
+                    user.put(Constants.KEY_NAME, name);
+                    user.put(Constants.KEY_PHONE_NUMBER, phone);
+                    user.put(Constants.KEY_EMAIL, email);
+                    user.put(Constants.KEY_IMAGE, encodedImage);
+                    if(task.isSuccessful()){
+                        showToast("Congratulations you are now registered!");
+                        userId = Objects.requireNonNull(auth.getCurrentUser()).getUid();
+                        database.collection(Constants.KEY_COLLECTION_USERS)
+                                .document(userId)
+                                .set(user)
+                                .addOnSuccessListener(documentReference -> {
+                                    preferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
+                                    preferenceManager.putString(Constants.KEY_USER_ID, userId);
+                                    preferenceManager.putString(Constants.KEY_NAME, name);
+                                    preferenceManager.putString(Constants.KEY_EMAIL, email);
+                                    preferenceManager.putString(Constants.KEY_PHONE_NUMBER, phone);
+                                    preferenceManager.putString(Constants.KEY_PASSWORD, password);
+                                    preferenceManager.putString(Constants.KEY_IMAGE, encodedImage);
+                                    preferenceManager.putInteger(Constants.KEY_AVAILABILITY, 1);
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(intent);
+                                    finish();
+                                })
+                                .addOnFailureListener(exception -> showToast("Unable to sign up!"));
+                    } else {
+                        showToast("Email is already taken!");
                     }
                 });
 

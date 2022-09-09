@@ -2,9 +2,11 @@ package com.example.mccchatapp.activities;
 
 import static com.example.mccchatapp.utilities.Constants.KEY_SENDER_ID;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -43,6 +45,7 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -61,7 +64,7 @@ public class ChatActivity extends BaseActivity {
     private List<ChatMessage> chatMessages;
     private ChatAdapter chatAdapter;
     private PreferenceManager preferenceManager;
-    private FirebaseFirestore database = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore database = FirebaseFirestore.getInstance();
     private String conversionId = null;
     private Boolean isReceiverAvailable = false;
     private Integer availabilityChecker = null;
@@ -207,6 +210,7 @@ public class ChatActivity extends BaseActivity {
         binding.inputMessage.setText(null);
     }
 
+    @SuppressLint("UseCompatLoadingForColorStateLists")
     private void listenAvailabilityOfReceiver() {
         database.collection(Constants.KEY_COLLECTION_USERS).document(
                 receiverUser.id
@@ -290,6 +294,7 @@ public class ChatActivity extends BaseActivity {
                 .addSnapshotListener(eventListener);
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private final EventListener<QuerySnapshot> eventListener = (value, error) -> {
         if (error != null) {
             return;
@@ -307,7 +312,9 @@ public class ChatActivity extends BaseActivity {
                     chatMessages.add(chatmessage);
                 }
             }
-            Collections.sort(chatMessages, (obj1, obj2) -> obj1.dateObject.compareTo(obj2.dateObject));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                Collections.sort(chatMessages, Comparator.comparing(obj -> obj.dateObject));
+            }
             if (count == 0) {
                 chatAdapter.notifyDataSetChanged();
             } else {
@@ -403,7 +410,7 @@ public class ChatActivity extends BaseActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
-                    String typing = dataSnapshot.child("typing").getValue().toString();
+                    String typing = Objects.requireNonNull(dataSnapshot.child("typing").getValue()).toString();
 
                     if (typing.equals(receiverUser)){
                         binding.typingtatus.setVisibility(View.VISIBLE);
