@@ -1,14 +1,12 @@
 package com.example.mccchatapp.activities;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Base64;
-import android.util.MalformedJsonException;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -16,7 +14,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
@@ -25,30 +22,21 @@ import com.example.mccchatapp.R;
 import com.example.mccchatapp.databinding.ActivityMainBinding;
 import com.example.mccchatapp.utilities.Constants;
 import com.example.mccchatapp.utilities.PreferenceManager;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.messaging.FirebaseMessaging;
 
-public class MainActivity extends BaseActivity {
+import java.util.Objects;
 
-    private Toolbar toolbar;
+public class MainActivity extends BaseActivity {
 
     private ActivityMainBinding binding;
     private PreferenceManager preferenceManager;
-    private DocumentReference documentReference;
-    private FirebaseFirestore database = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore database = FirebaseFirestore.getInstance();
     private DatabaseReference RootRef;
 
-
-    private void showToast(String message){
-
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +47,9 @@ public class MainActivity extends BaseActivity {
 
         RootRef = FirebaseDatabase.getInstance().getReference();
 
-        toolbar = (Toolbar) findViewById(R.id.main_page_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.main_page_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("MCC Chat App");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("MCC Chat App");
 
 
 
@@ -99,44 +87,28 @@ public class MainActivity extends BaseActivity {
         groupNameField.setHint("e,g Coding Cafe");
         builder.setView(groupNameField);
 
-        builder.setPositiveButton("Create", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i)
+        builder.setPositiveButton("Create", (dialogInterface, i) -> {
+            String groupName = groupNameField.getText().toString();
+            if (TextUtils.isEmpty(groupName))
             {
-                String groupName = groupNameField.getText().toString();
-                if (TextUtils.isEmpty(groupName))
-                {
-                    Toast.makeText(MainActivity.this, "Please write Group Name..." ,Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    CreateNewGroup(groupName);
-                }
+                Toast.makeText(MainActivity.this, "Please write Group Name..." ,Toast.LENGTH_SHORT).show();
             }
-
+            else
+            {
+                CreateNewGroup(groupName);
+            }
         });
 
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i)
-            {
-              dialogInterface.cancel();
-            }
-
-        });
+        builder.setNegativeButton("Cancel", (dialogInterface, i) -> dialogInterface.cancel());
         builder.show();
     }
 
     private void CreateNewGroup(final String groupName)
     {
-        RootRef.child("Groups").child(groupName).setValue("").addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task)
+        RootRef.child("Groups").child(groupName).setValue("").addOnCompleteListener(task -> {
+            if (task.isSuccessful())
             {
-                if (task.isSuccessful())
-                {
-                    Toast.makeText(MainActivity.this, groupName + "group a Created Successfully", Toast.LENGTH_SHORT).show();
-                }
+                Toast.makeText(MainActivity.this, groupName + "group a Created Successfully", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -162,7 +134,7 @@ public class MainActivity extends BaseActivity {
     private void updateToken(String token) {
 
         preferenceManager.putString(Constants.KEY_FCM_TOKEN, token);
-        documentReference = database.collection(Constants.KEY_COLLECTION_USERS)
+        DocumentReference documentReference = database.collection(Constants.KEY_COLLECTION_USERS)
                 .document(preferenceManager.getString(Constants.KEY_USER_ID));
         documentReference.update(Constants.KEY_FCM_TOKEN, token);
 
