@@ -2,7 +2,6 @@ package com.example.mccchatapp.activities;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.CompoundButton;
 
 import com.example.mccchatapp.databinding.ActivityAccountStatusBinding;
 import com.example.mccchatapp.utilities.Constants;
@@ -15,7 +14,7 @@ public class AccountStatusActivity extends BaseActivity {
     private ActivityAccountStatusBinding binding;
     private DocumentReference documentReference;
     private PreferenceManager preferenceManager;
-    private FirebaseFirestore database = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore database = FirebaseFirestore.getInstance();
 
 
     @Override
@@ -49,63 +48,54 @@ public class AccountStatusActivity extends BaseActivity {
         binding.switchAway.setChecked(sharedPreferences.getBoolean("switchAway", false));
 
 
-        binding.switchActive.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (binding.switchActive.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
-                    editor.putBoolean("switchActive", true);
-                    editor.apply();
-                    documentReference.update(Constants.KEY_AVAILABILITY, 1);
-                    preferenceManager.putInteger(Constants.KEY_AVAILABILITY, 1);
-                    binding.switchActive.setChecked(true);
-                    binding.switchBusy.setChecked(false);
-                    binding.switchAway.setChecked(false);
-                } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
-                    editor.putBoolean("switchActive", false);
-                    editor.apply();
-                }
+        binding.switchActive.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (binding.switchActive.isChecked()) {
+                SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                editor.putBoolean("switchActive", true);
+                editor.apply();
+                documentReference.update(Constants.KEY_AVAILABILITY, 1);
+                preferenceManager.putInteger(Constants.KEY_AVAILABILITY, 1);
+                binding.switchActive.setChecked(true);
+                binding.switchBusy.setChecked(false);
+                binding.switchAway.setChecked(false);
+            } else {
+                SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                editor.putBoolean("switchActive", false);
+                editor.apply();
             }
         });
 
-        binding.switchBusy.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (binding.switchBusy.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
-                    editor.putBoolean("switchBusy", true);
-                    editor.apply();
-                    documentReference.update(Constants.KEY_AVAILABILITY, 2);
-                    preferenceManager.putInteger(Constants.KEY_AVAILABILITY, 2);
-                    binding.switchBusy.setChecked(true);
-                    binding.switchActive.setChecked(false);
-                    binding.switchAway.setChecked(false);
-                } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
-                    editor.putBoolean("switchBusy", false);
-                    editor.apply();
-                }
+        binding.switchBusy.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (binding.switchBusy.isChecked()) {
+                SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                editor.putBoolean("switchBusy", true);
+                editor.apply();
+                documentReference.update(Constants.KEY_AVAILABILITY, 2);
+                preferenceManager.putInteger(Constants.KEY_AVAILABILITY, 2);
+                binding.switchBusy.setChecked(true);
+                binding.switchActive.setChecked(false);
+                binding.switchAway.setChecked(false);
+            } else {
+                SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                editor.putBoolean("switchBusy", false);
+                editor.apply();
             }
         });
 
-        binding.switchAway.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (binding.switchAway.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
-                    editor.putBoolean("switchAway", true);
-                    editor.apply();
-                    documentReference.update(Constants.KEY_AVAILABILITY, 3);
-                    preferenceManager.putInteger(Constants.KEY_AVAILABILITY, 3);
-                    binding.switchAway.setChecked(true);
-                    binding.switchActive.setChecked(false);
-                    binding.switchBusy.setChecked(false);
-                } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
-                    editor.putBoolean("switchAway", false);
-                    editor.apply();
-                }
+        binding.switchAway.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (binding.switchAway.isChecked()) {
+                SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                editor.putBoolean("switchAway", true);
+                editor.apply();
+                documentReference.update(Constants.KEY_AVAILABILITY, 3);
+                preferenceManager.putInteger(Constants.KEY_AVAILABILITY, 3);
+                binding.switchAway.setChecked(true);
+                binding.switchActive.setChecked(false);
+                binding.switchBusy.setChecked(false);
+            } else {
+                SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                editor.putBoolean("switchAway", false);
+                editor.apply();
             }
         });
 
