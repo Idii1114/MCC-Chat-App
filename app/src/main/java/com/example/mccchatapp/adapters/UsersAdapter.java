@@ -50,7 +50,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
     class UserViewHolder extends RecyclerView.ViewHolder {
 
         ItemContainerUserBinding binding;
-        private FirebaseFirestore database = FirebaseFirestore.getInstance();
+        private final FirebaseFirestore database = FirebaseFirestore.getInstance();
 
         UserViewHolder (ItemContainerUserBinding itemContainerUserBinding) {
             super(itemContainerUserBinding.getRoot());

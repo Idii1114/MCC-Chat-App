@@ -3,7 +3,6 @@ package com.example.mccchatapp.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -23,7 +22,7 @@ public class UsersActivity extends BaseActivity implements UserListeners {
 
     private ActivityUsersBinding binding;
     private PreferenceManager preferenceManager;
-    private FirebaseFirestore database = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore database = FirebaseFirestore.getInstance();
 
     private void showToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
@@ -50,16 +49,13 @@ public class UsersActivity extends BaseActivity implements UserListeners {
         String txt_InputSearch = binding.inputSearch.getText().toString();
 
         binding.back.setOnClickListener(view -> onBackPressed());
-        binding.inputSearch.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                getUserName();
-                getUserEmail();
-                if (TextUtils.isEmpty(txt_InputSearch)){
-                    listUsers();
-                }
-                return false;
+        binding.inputSearch.setOnKeyListener((view, i, keyEvent) -> {
+            getUserName();
+            getUserEmail();
+            if (TextUtils.isEmpty(txt_InputSearch)){
+                listUsers();
             }
+            return false;
         });
 
     }
@@ -93,9 +89,7 @@ public class UsersActivity extends BaseActivity implements UserListeners {
                             binding.usersRecycleView.setVisibility(View.VISIBLE);
                         }
                     }
-                }).addOnFailureListener(task -> {
-                    listUsers();
-                });
+                }).addOnFailureListener(task -> listUsers());
     }
 
 

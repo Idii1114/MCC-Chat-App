@@ -21,7 +21,7 @@ public class ProfileActivity extends BaseActivity {
     private ActivityProfileBinding binding;
     private PreferenceManager preferenceManager;
     private DocumentReference documentReference;
-    private FirebaseFirestore database = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore database = FirebaseFirestore.getInstance();
 
     private void showToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
@@ -74,9 +74,7 @@ public class ProfileActivity extends BaseActivity {
                     startActivity(new Intent(getApplicationContext(), SignInActivity.class));
                     finish();
                 })
-                .addOnFailureListener( e -> {
-                    showToast("Unable to sign out!");
-                });
+                .addOnFailureListener( e -> showToast("Unable to sign out!"));
 
     }
 

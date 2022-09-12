@@ -67,15 +67,12 @@ public class SendReportActivity extends BaseActivity {
             mimeMessage.setSubject("MCC Chat App: Feedback Report");
             mimeMessage.setText(binding.inputFeedback.getText().toString());
 
-            Thread thread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        Transport.send(mimeMessage);
-                        finish();
-                    } catch (MessagingException e) {
-                        e.printStackTrace();
-                    }
+            Thread thread = new Thread(() -> {
+                try {
+                    Transport.send(mimeMessage);
+                    finish();
+                } catch (MessagingException e) {
+                    e.printStackTrace();
                 }
             });
             thread.start();

@@ -118,7 +118,7 @@ public class ChatActivity extends BaseActivity {
         });
 
         //typing Status still not working properly
-//
+
 //        binding.inputMessage.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 //            @Override
 //            public void onFocusChange(View view, boolean hasFocus) {
