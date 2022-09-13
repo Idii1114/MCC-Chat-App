@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+import com.example.mccchatapp.databinding.ItemContainerRecentConversationBinding;
 import com.example.mccchatapp.databinding.ItemContainerUserListBinding;
-
+import com.example.mccchatapp.listeners.ConversionListener;
 import com.example.mccchatapp.listeners.UserListListener;
-
+import com.example.mccchatapp.models.ChatMessage;
 import com.example.mccchatapp.models.User;
 import com.example.mccchatapp.models.UserList;
 
