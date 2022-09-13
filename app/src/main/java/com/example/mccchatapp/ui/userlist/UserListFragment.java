@@ -33,7 +33,7 @@ public class UserListFragment extends Fragment implements UserListListener {
     private PreferenceManager preferenceManager;
     private List<UserList> userLists;
     private UserListAdapter userListAdapter;
-    private FirebaseFirestore database = FirebaseFirestore.getInstance();;
+    private final FirebaseFirestore database = FirebaseFirestore.getInstance();
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
