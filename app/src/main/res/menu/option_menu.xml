@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="Create Groups"
+        android:title="@string/create_groups"
         android:id="@+id/main_create_groups_option"
         app:showAsAction="never">
 

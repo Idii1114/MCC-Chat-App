@@ -6,4 +6,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="send_report">Send Report</string>
+    <string name="messages">Messages</string>
+    <string name="user_list">User List</string>
+    <string name="group_list">Group List</string>
+    <string name="create_groups">Create Groups</string>
 </resources>

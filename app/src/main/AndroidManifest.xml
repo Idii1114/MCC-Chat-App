@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mccchatapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -54,7 +55,8 @@
         <activity
             android:name=".activities.ChangeDetailsActivity"
             android:usesCleartextTraffic="true"
-            android:exported="false" />
+            android:exported="false"
+            tools:targetApi="m" />
 
         <service
             android:name=".firebase.MessagingService"

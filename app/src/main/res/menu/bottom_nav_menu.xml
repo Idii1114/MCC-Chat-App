@@ -4,16 +4,16 @@
     <item
         android:id="@+id/navigation_Messages"
         android:icon="@drawable/chat"
-        android:title="Messages" />
+        android:title="@string/messages" />
 
     <item
         android:id="@+id/navigation_UserList"
         android:icon="@drawable/user"
-        android:title="User List" />
+        android:title="@string/user_list" />
 
     <item
         android:id="@+id/navigation_GroupList"
         android:icon="@drawable/group"
-        android:title="Group List" />
+        android:title="@string/group_list" />
 
 </menu>
