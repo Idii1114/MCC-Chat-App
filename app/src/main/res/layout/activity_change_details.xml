@@ -33,11 +33,11 @@
                 android:id="@+id/text_Messages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
-                android:text="Change Details"
+                android:text="@string/change_details"
                 android:textColor="@color/primary_text"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Space
@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Change Profile Image"
+            android:text="@string/change_profile_image"
             android:textColor="@color/black"
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold"
@@ -76,7 +76,7 @@
             android:background="@drawable/background_search"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
-            android:text="Change Name"
+            android:text="@string/change_name"
             android:textAlignment="center"
             android:backgroundTint="@color/tint"
             android:textAllCaps="false"
@@ -96,7 +96,7 @@
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             android:textAlignment="center"
-            android:text="Change Email"
+            android:text="@string/change_email"
             tools:ignore="RtlCompat" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -112,7 +112,7 @@
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             android:textAlignment="center"
-            android:text="Change Phone Number"
+            android:text="@string/change_phone_number"
             tools:ignore="RtlCompat" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -128,7 +128,7 @@
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             android:textAlignment="center"
-            android:text="Change Password"
+            android:text="@string/change_password"
             tools:ignore="RtlCompat" />
 
     </LinearLayout>

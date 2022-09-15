@@ -10,4 +10,21 @@
     <string name="user_list">User List</string>
     <string name="group_list">Group List</string>
     <string name="create_groups">Create Groups</string>
+    <string name="active_status">Active Status</string>
+    <string name="shows_that_you_re_active">Shows that you\'re Active</string>
+    <string name="shows_that_you_re_away">Shows that you\'re Away</string>
+    <string name="shows_that_you_re_busy">Shows that you\'re Busy</string>
+    <string name="change_details">Change Details</string>
+    <string name="change_profile_image">Change Profile Image</string>
+    <string name="change_name">Change Name</string>
+    <string name="change_email">Change Email</string>
+    <string name="change_phone_number">Change Phone Number</string>
+    <string name="change_password">Change Password</string>
+    <string name="todo">TODO</string>
+    <string name="todo_">TODO</string>
+    <string name="type_a_message">Type a message...</string>
+    <string name="todo_1">TODO</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="email">Email</string>
+    <string name="send">Send</string>
 </resources>

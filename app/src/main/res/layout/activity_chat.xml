@@ -23,9 +23,10 @@
         android:layout_height="@dimen/_30sdp"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="@dimen/_16sdp"
         android:src="@drawable/back"
-        app:tint="@color/white"/>
+        app:tint="@color/white"
+        android:contentDescription="@string/todo"
+        tools:ignore="ContentDescription" />
 
     <FrameLayout
         android:id="@+id/layoutImage"
@@ -44,7 +45,7 @@
 
       <com.makeramen.roundedimageview.RoundedImageView
           android:id="@+id/availabilityStatus"
-          android:layout_marginLeft="33dp"
+          android:layout_marginStart="33dp"
           android:layout_marginTop="33dp"
           android:layout_width="12dp"
           android:layout_height="12dp"
@@ -64,23 +65,25 @@
         android:layout_marginStart="8dp"
         android:maxLines="1"
         android:textColor="@color/white"
-        android:textSize="10dp"
-        android:textStyle="bold" />
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:ignore="SmallSp" />
 
 
     <TextView
-        android:id="@+id/typingtatus"
+        android:id="@+id/typingstatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginStart="30dp"
         android:maxLines="2"
         android:textColor="@color/white"
-        android:textSize="10dp" />
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
 
 
     <Space
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
@@ -92,7 +95,9 @@
         android:layout_gravity="center"
         android:layout_marginEnd="@dimen/_10sdp"
         android:src="@drawable/info"
-        app:tint="@color/white" />
+        app:tint="@color/white"
+        android:contentDescription="@string/todo_"
+        tools:ignore="ContentDescription" />
 
 
   </LinearLayout>
@@ -136,7 +141,7 @@
 
     <EditText
         android:id="@+id/inputMessage"
-        android:layout_width="30dp"
+        android:layout_width="0dp"
         android:layout_height="46dp"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
@@ -144,13 +149,14 @@
         android:background="@drawable/background_search"
         android:focusable="auto"
         android:focusableInTouchMode="true"
-        android:hint="Type a message..."
+        android:hint="@string/type_a_message"
         android:inputType="text"
         android:paddingStart="@dimen/_16ssp"
         android:paddingEnd="@dimen/_16ssp"
         android:selectAllOnFocus="false"
         android:textColor="@color/primary_text"
-        android:textSize="20dp" />
+        android:textSize="20sp"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/layoutSend"
@@ -161,7 +167,9 @@
         android:focusable="auto"
         android:focusableInTouchMode="true"
         android:src="@drawable/send"
-        app:tint="@color/white" />
+        app:tint="@color/white"
+        android:contentDescription="@string/todo_1"
+        tools:ignore="ContentDescription" />
 
 
   </LinearLayout>
