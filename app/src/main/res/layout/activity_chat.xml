@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/primary"
+    android:background="#00B9E5"
     tools:context=".activities.ChatActivity">
 
   <LinearLayout
@@ -24,7 +24,7 @@
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
         android:src="@drawable/back"
-        app:tint="@color/white"
+        app:tint="@color/black"
         android:contentDescription="@string/todo"
         tools:ignore="ContentDescription" />
 
@@ -95,7 +95,7 @@
         android:layout_gravity="center"
         android:layout_marginEnd="@dimen/_10sdp"
         android:src="@drawable/info"
-        app:tint="@color/white"
+        app:tint="@color/black"
         android:contentDescription="@string/todo_"
         tools:ignore="ContentDescription" />
 
@@ -111,7 +111,8 @@
       app:layout_constraintBottom_toTopOf="@+id/linearLayoutBottom"
       app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop"
       app:layout_constraintVertical_bias="0.0"
-      tools:layout_editor_absoluteX="0dp" />
+      tools:layout_editor_absoluteX="0dp"
+      android:contentDescription="@string/message_content"/>
 
 
 
@@ -142,10 +143,11 @@
     <EditText
         android:id="@+id/inputMessage"
         android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
         android:layout_weight="1"
+        android:autofillHints=""
         android:background="@drawable/background_search"
         android:focusable="auto"
         android:focusableInTouchMode="true"
@@ -155,8 +157,8 @@
         android:paddingEnd="@dimen/_16ssp"
         android:selectAllOnFocus="false"
         android:textColor="@color/primary_text"
-        android:textSize="20sp"
-        android:autofillHints="" />
+        android:textColorHint="#78909C"
+        android:textSize="20sp" />
 
     <ImageView
         android:id="@+id/layoutSend"
@@ -167,7 +169,7 @@
         android:focusable="auto"
         android:focusableInTouchMode="true"
         android:src="@drawable/send"
-        app:tint="@color/white"
+        app:tint="#585756"
         android:contentDescription="@string/todo_1"
         tools:ignore="ContentDescription" />
 

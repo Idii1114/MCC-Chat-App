@@ -25,7 +25,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:contentDescription="TODO"
-            app:srcCompat="@drawable/mehlam_home_logo" />
+            app:srcCompat="@drawable/mehlam_home_logo"
+            tools:ignore="ContentDescription,HardcodedText" />
 
         <TextView
             android:id="@+id/textView2"
@@ -36,7 +37,8 @@
             android:textAlignment="center"
             android:textColor="@color/primary_text"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/textView3"
@@ -45,7 +47,8 @@
             android:layout_marginTop="5dp"
             android:text="Melham Construction Corporation"
             android:textAlignment="center"
-            android:textColor="@color/primary_text" />
+            android:textColor="@color/primary_text"
+            tools:ignore="HardcodedText" />
 
 
         <EditText
@@ -63,9 +66,10 @@
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/black"
             android:textColorHint="#070707"
-            android:textSize="@dimen/_13ssp" />
+            android:textSize="@dimen/_13ssp"
+            tools:ignore="HardcodedText" />
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -84,7 +88,7 @@
                 android:background="@drawable/background_search"
                 android:backgroundTint="#6FA9DF"
                 android:ems="10"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:imeOptions="actionNext"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
@@ -106,7 +110,8 @@
             android:background="@drawable/background_search"
             android:text="Sign in"
             android:textColor="#4E342E"
-            android:textSize="@dimen/_13sdp" />
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/textForgotPassword"
@@ -116,14 +121,15 @@
             android:layout_marginBottom="10dp"
             android:text="Forgot Password"
             android:textAlignment="center"
-            android:textColor="@color/primary_text" />
+            android:textColor="@color/primary_text"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/textCreateNewAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Don't have an account? Sign up here"
+            android:text="@string/don_t_have_an_account_sign_up_here"
             android:textAlignment="center"
             android:textColor="@color/primary_text" />
 

@@ -12,9 +12,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="@dimen/_8sdp"
                 android:src="@drawable/back"
-                android:tint="@color/primary" />
+                android:tint="@color/black" />
 
             <TextView
                 android:id="@+id/text_Messages"
@@ -50,10 +51,10 @@
             android:id="@+id/profileImage"
             android:layout_width="@dimen/_80ssp"
             android:layout_height="@dimen/_80ssp"
+            android:layout_gravity="center"
             android:layout_marginTop="@dimen/_50sdp"
             android:background="@drawable/background_image"
             android:scaleType="centerCrop"
-            android:layout_gravity="center"
             app:riv_oval="true" />
 
         <TextView
@@ -70,15 +71,15 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonName"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_32sdp"
             android:background="@drawable/background_search"
+            android:backgroundTint="@color/tint"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:text="@string/change_name"
             android:textAlignment="center"
-            android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             tools:ignore="RtlCompat" />
@@ -86,49 +87,49 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonEmail"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
-            android:paddingStart="@dimen/_16ssp"
-            android:paddingEnd="@dimen/_16ssp"
             android:background="@drawable/background_search"
             android:backgroundTint="@color/tint"
+            android:paddingStart="@dimen/_16ssp"
+            android:paddingEnd="@dimen/_16ssp"
+            android:text="@string/change_email"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:textAlignment="center"
-            android:text="@string/change_email"
             tools:ignore="RtlCompat" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonPhone"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
-            android:paddingStart="@dimen/_16ssp"
-            android:paddingEnd="@dimen/_16ssp"
             android:background="@drawable/background_search"
             android:backgroundTint="@color/tint"
+            android:paddingStart="@dimen/_16ssp"
+            android:paddingEnd="@dimen/_16ssp"
+            android:text="@string/change_phone_number"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:textAlignment="center"
-            android:text="@string/change_phone_number"
             tools:ignore="RtlCompat" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonPassword"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
-            android:paddingStart="@dimen/_16ssp"
-            android:paddingEnd="@dimen/_16ssp"
             android:background="@drawable/background_search"
             android:backgroundTint="@color/tint"
+            android:paddingStart="@dimen/_16ssp"
+            android:paddingEnd="@dimen/_16ssp"
+            android:text="@string/change_password"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:textAlignment="center"
-            android:text="@string/change_password"
             tools:ignore="RtlCompat" />
 
     </LinearLayout>

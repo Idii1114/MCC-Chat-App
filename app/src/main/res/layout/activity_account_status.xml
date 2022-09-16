@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="@dimen/_8sdp"
                 android:src="@drawable/back"
-                android:tint="@color/primary" />
+                android:tint="@color/black" />
 
             <TextView
                 android:id="@+id/text_Messages"

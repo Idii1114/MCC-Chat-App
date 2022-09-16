@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="@dimen/_8sdp"
                 android:src="@drawable/back"
-                android:tint="@color/primary" />
+                android:tint="@color/button" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,8 +39,9 @@
                 android:paddingStart="8dp"
                 android:text="@string/send_report"
                 android:textColor="@color/primary_text"
-                android:textSize="25dp"
-                android:textStyle="bold" />
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -53,9 +54,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:text="Feedback"
+            android:text="@string/feedback"
             android:textColor="@color/primary_text"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <EditText
@@ -70,7 +71,7 @@
             android:background="@drawable/background_search"
             android:backgroundTint="#142A69E3"
             android:gravity="start"
-            android:hint="Type something here..."
+            android:hint="@string/type_something_here"
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:padding="@dimen/_16ssp"
@@ -87,7 +88,8 @@
             android:background="@drawable/background_search"
             android:backgroundTint="@color/primary"
             android:text="Send"
-            android:textColor="@color/white" />
+            android:textColor="#FFFFFF"
+            tools:ignore="HardcodedText,TextContrastCheck" />
 
     </LinearLayout>
 

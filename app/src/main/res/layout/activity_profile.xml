@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -26,7 +27,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="@dimen/_8sdp"
                 android:src="@drawable/back"
-                android:tint="@color/primary" />
+                android:tint="@color/button" />
 
             <TextView
                 android:id="@+id/text_Messages"
@@ -34,10 +35,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="15dp"
-                android:text="User Profile"
+                android:text="@string/user_profile"
                 android:textColor="@color/primary_text"
-                android:textSize="25dp"
-                android:textStyle="bold" />
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -61,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@color/primary_text"/>
 
@@ -72,7 +74,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:textColor="@color/primary_text"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/text_phone"
@@ -81,7 +83,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="30dp"
             android:layout_gravity="center"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="@color/primary_text"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -95,7 +97,8 @@
             android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:text="Change Details"/>
+            android:text="Change Details"
+            tools:ignore="HardcodedText" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonAccountStatus"
@@ -108,7 +111,7 @@
             android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:text="Account Status"/>
+            android:text="@string/account_status"/>
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -122,7 +125,8 @@
             android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:text="Send Report"/>
+            android:text="Send Report"
+            tools:ignore="HardcodedText" />
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -136,7 +140,7 @@
             android:backgroundTint="@color/tint"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
-            android:text="Sign Out"/>
+            android:text="@string/sign_out"/>
 
 
     </LinearLayout>
