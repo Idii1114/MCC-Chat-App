@@ -413,9 +413,9 @@ public class ChatActivity extends BaseActivity {
                     String typing = Objects.requireNonNull(dataSnapshot.child("typing").getValue()).toString();
 
                     if (typing.equals(receiverUser)){
-                        binding.typingtatus.setVisibility(View.VISIBLE);
+                        binding.typingstatus.setVisibility(View.VISIBLE);
                     }else {
-                        binding.typingtatus.setVisibility(View.GONE);
+                        binding.typingstatus.setVisibility(View.GONE);
                     }
                 }
             }
