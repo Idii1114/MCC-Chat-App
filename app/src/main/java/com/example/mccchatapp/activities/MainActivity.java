@@ -8,7 +8,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Base64;
-import android.util.MalformedJsonException;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;

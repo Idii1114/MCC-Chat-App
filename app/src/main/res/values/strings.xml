@@ -17,9 +17,13 @@
     <string name="change_details">Change Details</string>
     <string name="change_profile_image">Change Profile Image</string>
     <string name="change_name">Change Name</string>
+    <string name="change_name1">Change Name?</string>
     <string name="change_email">Change Email</string>
+    <string name="change_email1">Change Email?</string>
     <string name="change_phone_number">Change Phone Number</string>
+    <string name="change_phone_number1">Change Phone Number?</string>
     <string name="change_password">Change Password</string>
+    <string name="change_password1">Change Password?</string>
     <string name="todo">TODO</string>
     <string name="todo_">TODO</string>
     <string name="type_a_message">Type a message...</string>
@@ -29,10 +33,28 @@
     <string name="send">Send</string>
     <string name="message_content">Message_Content</string>
     <string name="user_profile">User Profile</string>
+    <string name="user_info">User Info</string>
     <string name="account_status">Account Status</string>
     <string name="sign_out">Sign Out</string>
     <string name="feedback">Feedback</string>
     <string name="type_something_here">Type something here...</string>
     <string name="don_t_have_an_account_sign_up_here">Don\'t have an account? Sign up here</string>
     <string name="password">Password</string>
+    <string name="search">Search</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="close">Close</string>
+    <string name="update">Update</string>
+    <string name="enter_your_updated_phone_number">Enter your updated Phone Number</string>
+    <string name="enter_your_old_password">Enter your Old Password</string>
+    <string name="enter_your_new_password">Enter your New Password</string>
+    <string name="confirm_your_password">Confirm your Password</string>
+    <string name="enter_your_updated_name">Enter your updated Name</string>
+    <string name="enter_your_updated_email">Enter your updated Email</string>
+    <string name="call">Call</string>
+    <string name="sms">SMS</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="upload_image">Upload Image</string>
+
 </resources>

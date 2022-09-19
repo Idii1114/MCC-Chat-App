@@ -26,7 +26,7 @@
             android:textStyle="bold"
             android:textColor="@color/primary_text"
             android:textSize="25dp"
-            android:text="User List"/>
+            android:text="@string/user_list"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSearch"
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
             android:background="@drawable/background_search"
-            android:hint="Search"
+            android:hint="@string/search"
             android:inputType="text"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"

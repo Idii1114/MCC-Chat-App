@@ -81,9 +81,9 @@
 
             <EditText
                 android:id="@+id/inputPassword"
-                android:layout_width="318dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_width="315dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/background_search"
                 android:backgroundTint="#6FA9DF"

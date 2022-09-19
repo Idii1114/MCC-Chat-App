@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="15dp"
-                android:text="User Info"
+                android:text="@string/user_info"
                 android:textColor="@color/primary_text"
                 android:textSize="25dp"
                 android:textStyle="bold" />
@@ -92,7 +92,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email"
+                    android:text="@string/email"
                     android:textColor="@color/primary_text"
                     android:textStyle="bold"
                     android:layout_gravity="center"/>
@@ -116,7 +116,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Call"
+                    android:text="@string/call"
                     android:textColor="@color/primary_text"
                     android:textStyle="bold"
                     android:layout_gravity="center"/>
@@ -140,7 +140,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sms"
+                    android:text="@string/sms"
                     android:textColor="@color/primary_text"
                     android:textStyle="bold"
                     android:layout_gravity="center"/>
