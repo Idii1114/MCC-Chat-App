@@ -58,24 +58,22 @@
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:background="@drawable/background_search"
-            android:backgroundTint="#6FA9DF"
+            android:backgroundTint="@color/tint"
             android:ems="10"
-            android:hint="Email"
+            android:hint="@string/email"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/black"
-            android:textColorHint="#070707"
-            android:textSize="@dimen/_13ssp"
-            tools:ignore="HardcodedText" />
+            android:textColorHint="#455A64"
+            android:textSize="@dimen/_13ssp" />
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
             app:passwordToggleEnabled="true">
 
 
@@ -86,7 +84,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/background_search"
-                android:backgroundTint="#6FA9DF"
+                android:backgroundTint="@color/tint"
                 android:ems="10"
                 android:hint="@string/password"
                 android:imeOptions="actionNext"
@@ -94,9 +92,7 @@
                 android:inputType="textPassword"
                 android:paddingStart="@dimen/_16ssp"
                 android:paddingEnd="@dimen/_16ssp"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textColorHint="#050505"
                 android:textSize="@dimen/_12ssp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -109,7 +105,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/background_search"
             android:text="Sign in"
-            android:textColor="#4E342E"
+            android:textColor="#000000"
             android:textSize="@dimen/_13sdp"
             tools:ignore="HardcodedText" />
 

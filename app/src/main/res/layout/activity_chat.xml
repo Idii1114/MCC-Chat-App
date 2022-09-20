@@ -38,10 +38,11 @@
           android:id="@+id/profileImage"
           android:layout_width="@dimen/_35sdp"
           android:layout_height="@dimen/_35sdp"
+          android:layout_gravity="center"
           android:background="@drawable/background_image"
           android:scaleType="centerCrop"
-          android:layout_gravity="center"
-          app:riv_oval="true"/>
+          app:riv_oval="true"
+          tools:ignore="ImageContrastCheck" />
 
       <com.makeramen.roundedimageview.RoundedImageView
           android:id="@+id/availabilityStatus"
@@ -166,12 +167,12 @@
         android:layout_height="@dimen/_20sdp"
         android:layout_gravity="center"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/todo_1"
         android:focusable="auto"
         android:focusableInTouchMode="true"
         android:src="@drawable/send"
-        app:tint="#585756"
-        android:contentDescription="@string/todo_1"
-        tools:ignore="ContentDescription" />
+        app:tint="@color/ic_launcher_background"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
 
   </LinearLayout>

@@ -24,13 +24,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="@dimen/_16sdp"
             android:src="@drawable/back"
-            app:tint="@color/primary"
+            app:tint="@color/button"
             android:layout_gravity="center"/>
 
         <EditText
             android:id="@+id/inputSearch"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
@@ -41,7 +41,8 @@
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
-            android:textSize="20dp" />
+            android:textColorHint="#78909C"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

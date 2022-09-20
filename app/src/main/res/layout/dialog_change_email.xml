@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/enter_your_updated_email"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/input_email"
@@ -37,7 +37,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="08dp"
             android:background="@drawable/background_search"
-            android:backgroundTint="#C16FA9DF"
+            android:backgroundTint="@color/tint1"
             android:inputType="text"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/confirm_your_password"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/input_password"
@@ -58,7 +58,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="08dp"
             android:background="@drawable/background_search"
-            android:backgroundTint="#C16FA9DF"
+            android:backgroundTint="@color/tint1"
             android:inputType="textPassword"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
@@ -78,7 +78,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/background_search"
-                android:text="@string/close" />
+                android:text="@string/close"
+                android:textColor="@color/black"
+                tools:ignore="TextContrastCheck" />
 
             <Button
                 android:id="@+id/button_update"
@@ -86,7 +88,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/background_search"
-                android:text="@string/update" />
+                android:text="@string/update"
+                android:textColor="@color/black"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 

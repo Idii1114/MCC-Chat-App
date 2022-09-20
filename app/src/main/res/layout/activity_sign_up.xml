@@ -25,7 +25,7 @@
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:src="@drawable/back"
-            android:tint="@color/primary"
+            android:tint="@color/button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,7 +42,8 @@
                 android:layout_height="@dimen/_80ssp"
                 android:background="@drawable/background_image"
                 android:scaleType="centerCrop"
-                app:riv_oval="true" />
+                app:riv_oval="true"
+                tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/textUploadImage"
@@ -50,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/upload_image"
-                android:textColor="@color/secondary_text"
+                android:textColor="#000000"
                 android:textSize="@dimen/_10ssp"
                 android:visibility="visible" />
 
@@ -63,7 +64,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:background="@drawable/background_search"
-            android:backgroundTint="#6FA9DF"
+            android:backgroundTint="@color/tint"
             android:ems="10"
             android:hint="@string/name"
             android:imeOptions="actionNext"
@@ -71,9 +72,10 @@
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="@dimen/_13ssp" />
+            android:textColorHint="@color/primary_text"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/inputEmail"
@@ -82,17 +84,18 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/background_search"
+            android:backgroundTint="@color/tint"
             android:ems="10"
             android:hint="@string/email"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
-            android:backgroundTint="#6FA9DF"
-            android:textStyle="bold"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp" />
+            android:textColorHint="@color/primary_text"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/inputPhoneNumber"
@@ -101,17 +104,18 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/background_search"
+            android:backgroundTint="@color/tint"
             android:ems="10"
             android:hint="@string/phone_number"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
-            android:backgroundTint="#6FA9DF"
-            android:textStyle="bold"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp" />
+            android:textColorHint="@color/primary_text"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
 
 
         <EditText
@@ -122,17 +126,18 @@
             android:layout_marginTop="20dp"
 
             android:background="@drawable/background_search"
+            android:backgroundTint="@color/tint"
             android:ems="10"
             android:hint="@string/password"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:textStyle="bold"
-            android:backgroundTint="#6FA9DF"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp" />
+            android:textColorHint="@color/primary_text"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
 
 
         <EditText
@@ -142,7 +147,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/background_search"
-            android:backgroundTint="#6FA9DF"
+            android:backgroundTint="@color/tint"
             android:ems="10"
             android:hint="@string/confirm_password"
             android:imeOptions="actionNext"
@@ -151,6 +156,7 @@
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/black"
+            android:textColorHint="@color/primary_text"
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold" />
 
@@ -159,7 +165,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Do you agree in MCC's terms and condition?"
+            android:text="@string/do_you_agree_in_mcc_s_terms_and_condition"
             android:textAlignment="center" />
 
         <FrameLayout
@@ -175,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/background_search"
-                android:text="sign up"
+                android:text="@string/sign_up"
                 android:visibility="gone" />
 
         </FrameLayout>

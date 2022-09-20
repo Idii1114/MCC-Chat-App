@@ -76,7 +76,7 @@
             android:inputType="textMultiLine"
             android:padding="@dimen/_16ssp"
             android:textColor="@color/primary_text"
-            android:textColorHint="#0A0A0B"
+            android:textColorHint="#000000"
             android:textSize="@dimen/_13ssp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -88,7 +88,7 @@
             android:background="@drawable/background_search"
             android:backgroundTint="@color/primary"
             android:text="Send"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             tools:ignore="HardcodedText,TextContrastCheck" />
 
     </LinearLayout>
