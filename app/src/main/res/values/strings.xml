@@ -58,5 +58,9 @@
     <string name="upload_image">Upload Image</string>
     <string name="sign_up">sign up</string>
     <string name="do_you_agree_in_mcc_s_terms_and_condition">Do you agree in MCC\'s terms and condition?</string>
+    <string name="input_password">Input Password</string>
+    <string name="new_phone_number">New Phone Number</string>
+    <string name="Text_Password">Password</string>
+    <string name="new_password">New Password</string>
 
 </resources>

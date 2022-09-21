@@ -38,11 +38,13 @@
             android:layout_marginTop="08dp"
             android:background="@drawable/background_search"
             android:backgroundTint="@color/tint1"
+            android:hint="@string/email"
             android:inputType="text"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp" />
+            android:textSize="@dimen/_13ssp"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,11 +61,13 @@
             android:layout_marginTop="08dp"
             android:background="@drawable/background_search"
             android:backgroundTint="@color/tint1"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:paddingStart="@dimen/_16ssp"
             android:paddingEnd="@dimen/_16ssp"
             android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp" />
+            android:textSize="@dimen/_13ssp"
+            tools:ignore="TextContrastCheck" />
 
         <LinearLayout
             android:layout_width="wrap_content"
