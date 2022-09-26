@@ -33,7 +33,7 @@
                 android:id="@+id/text_Messages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
                 android:text="@string/user_info"
                 android:textColor="@color/primary_text"
@@ -79,7 +79,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:id="@+id/button_email"
@@ -89,7 +90,8 @@
                     android:layout_marginEnd="@dimen/_10sdp"
                     app:srcCompat="@drawable/email"
                     app:tint="@color/primary"
-                    tools:ignore="ImageContrastCheck" />
+                    tools:ignore="ImageContrastCheck"
+                    android:contentDescription="@string/todo" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -104,7 +106,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:id="@+id/button_call"
@@ -114,7 +117,8 @@
                     android:layout_marginEnd="@dimen/_10sdp"
                     app:srcCompat="@drawable/call"
                     app:tint="@color/primary"
-                    tools:ignore="ImageContrastCheck" />
+                    tools:ignore="ImageContrastCheck"
+                    android:contentDescription="@string/todo" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -129,7 +133,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:id="@+id/button_sms"
@@ -139,7 +144,8 @@
                     android:layout_marginEnd="@dimen/_10sdp"
                     app:srcCompat="@drawable/sms"
                     app:tint="@color/primary"
-                    tools:ignore="ImageContrastCheck" />
+                    tools:ignore="ImageContrastCheck"
+                    android:contentDescription="@string/todo" />
 
                 <TextView
                     android:layout_width="wrap_content"

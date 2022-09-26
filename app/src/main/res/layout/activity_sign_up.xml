@@ -21,7 +21,7 @@
             android:id="@+id/back"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:src="@drawable/back"
@@ -115,7 +115,8 @@
             android:textColor="@color/primary_text"
             android:textColorHint="@color/primary_text"
             android:textSize="@dimen/_13ssp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TextFields" />
 
 
         <EditText
